@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const Greatful = [];
 var btn = document.getElementById('btn');    
 var text = document.getElementById('Gratitude-text');
@@ -19,6 +18,5 @@ function greatfulText () {
 
 
 btn.addEventListener('click', greatfulSave);
-=======
 
->>>>>>> a50aa0dd0e3339c5bfea3eadccceacf4269a914d
+git checkout Appreciation
