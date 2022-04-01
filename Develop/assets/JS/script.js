@@ -18,5 +18,3 @@ function greatfulText () {
 
 
 btn.addEventListener('click', greatfulSave);
-
-git checkout Appreciation
