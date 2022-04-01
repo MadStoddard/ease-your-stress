@@ -15,6 +15,10 @@ header {
     flex-wrap: wrap;
 };
 
+.pure-u-1-5 {
+    text-decoration: none;
+};
+
 
 .pure-u-1-5 {
     text-decoration: none;
