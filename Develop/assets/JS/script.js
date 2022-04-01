@@ -10,16 +10,6 @@ console.log(Greatful);
 localStorage.setItem('greatful', JSON.stringify(Greatful));
 }
 
-function greatfulText () {
-    var button = document.createElement('button');
-    button.innerHTML = gre
-
-}
-
-
-btn.addEventListener('click', greatfulSave);
-
-
 var catApi = "https://api.thecatapi.com/v1/images/search"
 
 fetch(catApi)
