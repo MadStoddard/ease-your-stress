@@ -1,5 +1,4 @@
 * {
-    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,18 +7,81 @@
 
 header {
     text-decoration: none;
-    padding: 20px 35px;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    padding-left: 20px;
     background-color: rgb(53, 184, 184);
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-};
+    justify-content: space-between;
+}
 
-.pure-u-1-5 {
+.nav-title {
+    padding-top: 60px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-size: 60px;
+}
+
+header h1 {
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-size: 40px;
+}
+
+header nav {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+    margin-top: 35px;
+    padding-right: 20px;
+}
+
+.pure-u-1-5 a {
     text-decoration: none;
-};
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+    font-style: italic;
+}
 
 
-.pure-u-1-5 {
-    text-decoration: none;
-  };
+/* rest section */
+#rest {
+    border: 8px solid #1C6EA4;
+    background-color: #1C6EA4;
+}
+
+/* exercise section */
+#exercise {
+    border: 8px solid #7b6e7c;
+    background-color: #7b6e7c;
+}
+
+/* laugh section */
+#laugh {
+    border: 8px solid #91aeda;
+    background-color: #91aeda;
+}
+
+.cat-image img {
+    max-width: 50%;
+    border: 8px solid #1C6EA4;
+}
+
+/* Appreciation & gratitude section */
+#appreciation-gratitude {
+    border: 8px solid #5d79a3;
+    background-color: #5d79a3;
+
+}
+
+/* explore section */
+#explore {
+    border: 8px solid #a79980;
+    background-color: #a79980;
+}
