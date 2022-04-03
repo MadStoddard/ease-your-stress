@@ -17,7 +17,8 @@ header {
 }
 
 .nav-title {
-    padding-top: 60px;
+    
+    padding-top: 50px;
     padding-bottom: 0px;
     margin-bottom: 0px;
     color: black;
@@ -25,7 +26,7 @@ header {
 }
 
 header h1 {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-right: 30px;
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -52,20 +53,27 @@ header nav {
 
 /* rest section */
 #rest {
-    border: 8px solid #1C6EA4;
+    border: 4px solid #747481;
     background-color: #1C6EA4;
+    padding-left: 10px;
+}
+
+#rest iframe {
+    border: 4px solid black;
 }
 
 /* exercise section */
 #exercise {
-    border: 8px solid #7b6e7c;
+    border: 4px solid #19191a;
     background-color: #7b6e7c;
+    padding-left: 10px;
 }
 
 /* laugh section */
 #laugh {
-    border: 8px solid #91aeda;
+    border: 4px solid #19191a;
     background-color: #91aeda;
+    padding-left: 10px;
 }
 
 .cat-image img {
@@ -75,13 +83,14 @@ header nav {
 
 /* Appreciation & gratitude section */
 #appreciation-gratitude {
-    border: 8px solid #5d79a3;
+    border: 4px solid #19191a;
     background-color: #5d79a3;
-
+    padding-left: 10px;
 }
 
 /* explore section */
 #explore {
-    border: 8px solid #a79980;
+    border: 4px solid #19191a;
     background-color: #a79980;
+    padding-left: 10px;
 }
