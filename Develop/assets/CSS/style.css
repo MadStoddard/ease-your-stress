@@ -13,13 +13,23 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-};
+}
 
 .pure-u-1-5 {
     text-decoration: none;
-};
+}
 
 
 .pure-u-1-5 {
     text-decoration: none;
-  };
+  }
+
+.appreciationGratitude {
+    text-decoration: none;
+    padding: 20px 35px;
+    background-color: rgb(53, 184, 184);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
