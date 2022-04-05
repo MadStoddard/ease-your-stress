@@ -15,21 +15,29 @@ header {
     flex-wrap: wrap;
 }
 
-.pure-u-1-5 {
+#Gratitude-text {
+    width: 175px;
+}
+
+.pure-g {
     text-decoration: none;
 }
 
+#Appreciation {
+    display: none;
+}
 
-.pure-u-1-5 {
+.pure-g {
     text-decoration: none;
   }
 
-.appreciationGratitude {
+.AppreciationGratitude {
     text-decoration: none;
     padding: 20px 35px;
-    background-color: rgb(53, 184, 184);
+    background-color: #ffb347;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    text-decoration: none;
 }
 
