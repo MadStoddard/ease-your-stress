@@ -90,7 +90,6 @@ function loadImg() {
         return response.json();
     })
 
-=======
 	.catch(err => console.error(err));
 
     
@@ -115,8 +114,6 @@ function loadImg() {
     
 var catBtn = document.querySelector("#image-btn");
 catBtn.addEventListener('click', loadImg);
-=======
-
 var catBtn = document.querySelector("#image-btn");
 catBtn.addEventListener('click', loadImg);
 
