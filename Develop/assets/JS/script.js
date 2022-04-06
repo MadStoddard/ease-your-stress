@@ -7,7 +7,7 @@ var favList =document.getElementById('favList');
 var favArr = [];
 var link;
 var name1 = '';
-var bd = false;
+var bd = true;
 var text ='';
 favoriteBtn.addEventListener('click', function() {
     name1 = localStorage.getItem('recipe-name');
@@ -31,7 +31,7 @@ favoriteBtn.addEventListener('click', function() {
 showFavorites.addEventListener('click',function(){
     favArr = localStorage.getItem('favArr')
     favArr = JSON.parse(favArr);
-    if (favArr!=null) {
+    if (favArr!=null && bd == true) {
         for(var i=0;i<favArr.length;i++){
         var li = document.createElement('li') 
         var a = document.createElement('a') 
@@ -45,10 +45,14 @@ showFavorites.addEventListener('click',function(){
         favList.appendChild(li);
         li.appendChild(a);
         li.appendChild(img);
-        
+        bd = false;
     };
-    }else {
-        console.log('Null')
+    }else if (bd == false){
+        favList.setAttribute('style','display:none');
+        bd = null;
+    } else if (bd == null){
+        favList.setAttribute('style','display:block');
+        bd = false;
     }
     
    
