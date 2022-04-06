@@ -89,6 +89,20 @@ function loadImg() {
     .then(response => {
         return response.json();
     })
+
+=======
+	.catch(err => console.error(err));
+
+    
+// random cat image
+function loadImg() {
+    var catApi = "https://api.thecatapi.com/v1/images/search?api_key=64449b51-6a0d-4e9c-be78-0517d1e9f6a7";
+    var imageDiv = document.querySelector(".cat-image");
+    fetch(catApi)
+    .then(response => {
+        return response.json();
+    })
+
     .then(data => {
         for (var i=0; i <data.length; i++) {
             var imageEl = document.createElement('img');
@@ -97,6 +111,13 @@ function loadImg() {
         }
     });
 };
+
     
 var catBtn = document.querySelector("#image-btn");
 catBtn.addEventListener('click', loadImg);
+=======
+
+var catBtn = document.querySelector("#image-btn");
+catBtn.addEventListener('click', loadImg);
+
+
