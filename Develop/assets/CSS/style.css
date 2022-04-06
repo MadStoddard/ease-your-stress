@@ -50,6 +50,17 @@ header nav {
     font-style: italic;
 }
 
+#Gratitude-text {
+    width: 175px;
+}
+
+.pure-g {
+    text-decoration: none;
+}
+
+#Appreciation {
+    display: none;
+}
 
 /* rest section */
 #rest {
@@ -94,3 +105,17 @@ header nav {
     background-color: #a79980;
     padding-left: 10px;
 }
+.pure-g {
+    text-decoration: none;
+  }
+
+.AppreciationGratitude {
+    text-decoration: none;
+    padding: 20px 35px;
+    background-color: #ffb347;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
