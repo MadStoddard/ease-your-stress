@@ -13,14 +13,41 @@ header {
     background-color: rgb(53, 184, 184);
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-#Gratitude-text {
-    width: 175px;
+.nav-title {
+    
+    padding-top: 50px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-size: 60px;
 }
 
-.pure-g {
+header h1 {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-size: 40px;
+}
+
+header nav {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+    margin-top: 35px;
+    padding-right: 20px;
+}
+
+.pure-u-1-5 a {
     text-decoration: none;
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+    font-style: italic;
 }
 
 #Appreciation {
@@ -70,17 +97,3 @@ header {
     background-color: #a79980;
     padding-left: 10px;
 }
-.pure-g {
-    text-decoration: none;
-  }
-
-.AppreciationGratitude {
-    text-decoration: none;
-    padding: 20px 35px;
-    background-color: #ffb347;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-decoration: none;
-}
-
