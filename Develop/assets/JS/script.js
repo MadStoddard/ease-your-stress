@@ -100,3 +100,11 @@ function loadImg() {
     
 var catBtn = document.querySelector("#image-btn");
 catBtn.addEventListener('click', loadImg);
+function A(){
+fetch('https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=VBndNW51WnDk1pZupTwSSznHcMnutqf3DKYdXklu')
+.then(response => response.json())
+.then(function(data) {
+    console.log(data);
+});
+}
+A();
