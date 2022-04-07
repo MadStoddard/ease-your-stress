@@ -121,7 +121,7 @@ header nav {
 }
 
 /* explore section */
-#explore {
+#eatout {
     border: 4px solid #19191a;
     background-color: #a79980;
     padding-left: 10px;
@@ -156,7 +156,7 @@ header nav {
 }
 
 /* Appreciation & gratitude section */
-#appreciation-gratitude {
+#AppreciationGratitude {
     border: 4px solid #19191a;
     background-color: #5d79a3;
     padding-left: 10px;
@@ -180,6 +180,11 @@ header nav {
     header ul {
         margin-bottom: 40px;
     }
+
+    #rest iframe {
+        max-width: 98%;
+
+    }
     #Gratitude {
         justify-content: center;
         align-items: center;
@@ -193,5 +198,9 @@ header nav {
     .submit{
         width: 100%;
         height: 100%;
+    }
+
+    #recipe-img {
+        max-width: 98%;
     }
   }

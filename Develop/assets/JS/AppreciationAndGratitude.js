@@ -22,7 +22,7 @@ function AppreciationSubmit() {
         } else if (localStorage.getItem(`I'm Greatful For0`)){
 
         } else {
-            localStorage.setItem(`I'm Greatful For0`, AppTextArea.value)
+            localStorage.setItem(``, AppTextArea.value)
         }
     }
 }
