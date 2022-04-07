@@ -102,21 +102,24 @@ function loadImg() {
     })
 
     .then(data => {
-        for (var i=0; i <data.length; i++) {
+        
             var imageEl = document.getElementById('cat-image');
-            imageEl.src = data[i].url;
+            console.log(imageEl)
+            imageEl.setAttribute('src',data[0].url)
+            //imageEl.src = data[0].url;
             imageDiv.append(imageEl);
-        }
+        
     });
 };
 
     
 var catBtn = document.querySelector("#image-btn");
+
 catBtn.addEventListener('click', loadImg);
 
 
-var catBtn = document.querySelector("#image-btn");
-catBtn.addEventListener('click', loadImg);
+// var catBtn = document.querySelector("#image-btn");
+// catBtn.addEventListener('click', loadImg);
 
 /*query = 'Hiking'
 function A(){
