@@ -65,8 +65,8 @@ header nav {
     border: 4px solid black;
 }
 
-/* exercise section */
-#exercise {
+/* eatout section */
+#eatout {
     border: 4px solid #19191a;
     background-color: #7b6e7c;
     padding-left: 10px;
@@ -85,7 +85,7 @@ header nav {
 }
 
 /* Appreciation & gratitude section */
-#appreciation-gratitude {
+.AppreciationGratitude {
     border: 4px solid #19191a;
     background-color: #5d79a3;
     padding-left: 10px;
