@@ -84,7 +84,7 @@ function loadImg() {
     })
     .then(data => {
         for (var i=0; i <data.length; i++) {
-            var imageEl = document.createElement('img');
+            var imageEl = document.getElementById('cat-image');
             imageEl.src = data[i].url;
             imageDiv.append(imageEl);
         }
