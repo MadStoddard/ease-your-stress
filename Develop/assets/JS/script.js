@@ -92,7 +92,7 @@ function loadImg() {
 
 	.catch(err => console.error(err));
 
-    
+};
 // random cat image
 function loadImg() {
     var catApi = "https://api.thecatapi.com/v1/images/search?api_key=64449b51-6a0d-4e9c-be78-0517d1e9f6a7";
