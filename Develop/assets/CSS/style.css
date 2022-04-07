@@ -167,3 +167,9 @@ header nav {
     background-color: #a79980;
     padding-left: 10px;
 }
+
+.ParkImages {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+}

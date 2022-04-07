@@ -14,12 +14,22 @@ var recipeLink = document.getElementById('recipe-link');
 var recipeName = document.getElementById('recipe-name');
 var favoriteBtn = document.getElementById('favoriteBtn');
 var showFavorites =document.getElementById('showFavorites');
-var favList =document.getElementById('favList');
+var favList = document.getElementById('favList');
+var parkImg = document.getElementById('parkImg');
 var favArr = [];
 var link;
 var name1 = '';
 var bd = true;
 var text ='';
+var query = '';
+function RandomNum (min,max) {
+    
+        min = Math.ceil(min)
+        max= Math.floor(max)
+        //console.log(Math.floor(Math.random() * (max - min) + min));
+        return Math.floor(Math.random() * (max - min) + min);
+        
+}
 favoriteBtn.addEventListener('click', function() {
     name1 = localStorage.getItem('recipe-name');
     favArr = localStorage.getItem('favArr');
@@ -117,4 +127,27 @@ catBtn.addEventListener('click', loadImg);
 var catBtn = document.querySelector("#image-btn");
 catBtn.addEventListener('click', loadImg);
 
+/*query = 'Hiking'
+function A(){
 
+    fetch('https://developer.nps.gov/api/v1/activities/parks?q='+query+'&limit=5&api_key=VBndNW51WnDk1pZupTwSSznHcMnutqf3DKYdXklu')
+    .then(function (response){
+        return response.json()
+    })
+    .then(function(data1) {
+
+       var code = data1.data[0].parks[RandomNum(1,268)].parkCode
+        fetch('https://developer.nps.gov/api/v1/activities/parks?parkCode='+code+'&api_key=VBndNW51WnDk1pZupTwSSznHcMnutqf3DKYdXklu')
+        .then(function (response){
+            return response.json()
+        })
+        .then(function (data){
+            console.log(data)
+        })
+        //parkImg.setAttribute('src',data1.data[0].images[0].url);
+        
+        
+    });
+    }
+    A();
+    */
