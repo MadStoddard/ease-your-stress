@@ -1,14 +1,3 @@
-const Grateful = [];
-var btn = document.getElementById('btn');    
-var text = document.getElementById('Gratitude-text');
-if (localStorage.getItem("grateful")){
-    Grateful.push(localStorage.getItem('grateful'));
-}
-function gratefulSave () {
-Grateful.push(text.value);
-console.log(Grateful);
-localStorage.setItem('grateful', JSON.stringify(Grateful));
-}
 var recipeImg = document.getElementById('recipe-img');
 var recipeLink = document.getElementById('recipe-link');
 var recipeName = document.getElementById('recipe-name');
@@ -115,7 +104,7 @@ function loadImg() {
     
 var catBtn = document.querySelector("#image-btn");
 catBtn.addEventListener('click', loadImg);
-=======
+
 
 var catBtn = document.querySelector("#image-btn");
 catBtn.addEventListener('click', loadImg);

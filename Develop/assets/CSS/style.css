@@ -180,4 +180,18 @@ header nav {
     header ul {
         margin-bottom: 40px;
     }
+    #Gratitude {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Grat{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .submit{
+        width: 100%;
+        height: 100%;
+    }
   }
