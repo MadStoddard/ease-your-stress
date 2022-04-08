@@ -10,14 +10,22 @@ var recipeLink = document.getElementById('recipe-link');
 var recipeName = document.getElementById('recipe-name');
 var favoriteBtn = document.getElementById('favoriteBtn');
 var showFavorites =document.getElementById('showFavorites');
-var favList =document.getElementById('favList');
-var catBtn = document.querySelector("#image-btn");
+var favList = document.getElementById('favList');
+var parkImg = document.getElementById('parkImg');
 var favArr = [];
 var link;
 var name1 = '';
 var bd = true;
 var text ='';
-
+var query = '';
+function RandomNum (min,max) {
+    
+        min = Math.ceil(min)
+        max= Math.floor(max)
+        //console.log(Math.floor(Math.random() * (max - min) + min));
+        return Math.floor(Math.random() * (max - min) + min);
+        
+}
 favoriteBtn.addEventListener('click', function() {
     name1 = localStorage.getItem('recipe-name');
     favArr = localStorage.getItem('favArr');
@@ -78,11 +86,7 @@ fetch('https://api.edamam.com/api/recipes/v2?type=public&q=cookie&app_id=0637c2e
         localStorage.setItem('recipe-link',data.hits[0].recipe.url);
         localStorage.setItem('recipe-name',data.hits[0].recipe.label);
         localStorage.setItem('recipe-img',data.hits[0].recipe.image);
-
-    })
-	.catch(err => console.error(err));
-
-    
+    });
 // random cat image
 function loadImg() {
     var catApi = "https://api.thecatapi.com/v1/images/search?api_key=64449b51-6a0d-4e9c-be78-0517d1e9f6a7";
@@ -91,12 +95,23 @@ function loadImg() {
     .then(response => {
         return response.json();
     })
-    .then(data => {
-        for (var i=0; i <data.length; i++) {
-            var imageEl = document.createElement('img');
-            imageEl.src = data[i].url;
-            imageDiv.append(imageEl);
-        }
+
+	.catch(err => console.error(err));
+
+};
+// random cat image
+function loadImg() {
+    var catApi = "https://api.thecatapi.com/v1/images/search?api_key=64449b51-6a0d-4e9c-be78-0517d1e9f6a7";
+    var imageDiv = document.querySelector(".cat-image");
+    fetch(catApi)
+    .then(response => {
+        return response.json();
+    })
+
+    .then(function(data){
+            var imageEl = document.getElementById('cat-image');
+            imageEl.src = data[0].url;
+            imageEl.setAttribute('style','border: 8px solid #1C6EA4');
     });
 };
 

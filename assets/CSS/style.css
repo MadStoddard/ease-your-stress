@@ -53,6 +53,7 @@ header nav {
     color: white;
     padding: 10px;
     font-style: italic;
+
 }
 
 
@@ -118,7 +119,8 @@ header nav {
 
 .cat-image img {
     max-width: 50%;
-    border: 8px solid #1C6EA4;
+    /*border: 8px solid #1C6EA4;
+    */
 }
 
 /* Appreciation & gratitude section */
@@ -149,7 +151,8 @@ header nav {
 }
 .pure-g {
     text-decoration: none;
-}
+  }
+
 
 
 
@@ -173,7 +176,8 @@ header nav {
 
 .cat-image img {
     max-width: 50%;
-    border: 8px solid #1C6EA4;
+    /*border: 8px solid #1C6EA4;
+    */
 }
 
 /* Appreciation & gratitude section */
@@ -189,6 +193,7 @@ header nav {
     background-color: #a79980;
     padding-left: 10px;
 }
+
 
 @media only screen and (max-width: 600px) {
     header{
