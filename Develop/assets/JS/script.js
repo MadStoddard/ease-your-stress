@@ -102,13 +102,9 @@ function loadImg() {
     })
 
     .then(function(data){
-        
             var imageEl = document.getElementById('cat-image');
-            imageEl.setAttribute('style','border: 8px solid #1C6EA4');
-            imageEl.src = '';
             imageEl.src = data[0].url;
-            imageDiv.append(imageEl);
-        
+            imageEl.setAttribute('style','border: 8px solid #1C6EA4');
     });
 };
 
