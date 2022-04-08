@@ -49,8 +49,10 @@ header nav {
     color: white;
     padding: 10px;
     font-style: italic;
-=======
+}
 
+.pure-u-1-5 a:hover {
+    color: #747481;
 }
 
 header h1 {
@@ -78,6 +80,12 @@ header nav {
     font-style: italic;
 }
 
+.section-title {
+    font-size: 50px;
+    font-style: italic;
+    color: white;
+    text-decoration: underline;
+}
 #Appreciation {
     display: none;
 }
@@ -94,43 +102,29 @@ header nav {
     border: 4px solid black;
 }
 
-/* eatout section */
-#eatout {
+/* exercise section */
+#exercise {
     border: 4px solid #19191a;
     background-color: #7b6e7c;
     padding-left: 10px;
 }
 
-/* laugh section */
-#laugh {
-    border: 4px solid #19191a;
-    background-color: #91aeda;
-    padding-left: 10px;
-}
-
-.cat-image img {
-    max-width: 50%;
-    border: 8px solid #1C6EA4;
-}
-
 /* Appreciation & gratitude section */
-.AppreciationGratitude {
+#appreciation-gratitude {
     border: 4px solid #19191a;
     background-color: #5d79a3;
     padding-left: 10px;
 }
 
-/* explore section */
-#explore {
+/* eatout section */
+#eatout {
     border: 4px solid #19191a;
     background-color: #a79980;
     padding-left: 10px;
 }
 .pure-g {
     text-decoration: none;
-  }
-=======
-
+}
 
 #rest iframe {
     border: 4px solid black;
@@ -150,24 +144,18 @@ header nav {
     padding-left: 10px;
 }
 
-.cat-image img {
+.cat-image img, #recipe-img {
     max-width: 50%;
     border: 8px solid #1C6EA4;
 }
 
 /* Appreciation & gratitude section */
-#appreciation-gratitude {
+#AppreciationGratitude {
     border: 4px solid #19191a;
     background-color: #5d79a3;
     padding-left: 10px;
 }
 
-/* explore section */
-#explore {
-    border: 4px solid #19191a;
-    background-color: #a79980;
-    padding-left: 10px;
-}
 
 @media only screen and (max-width: 600px) {
     header{
@@ -179,6 +167,11 @@ header nav {
     }
     header ul {
         margin-bottom: 40px;
+    }
+
+    #rest iframe {
+        max-width: 98%;
+
     }
     #Gratitude {
         justify-content: center;
@@ -193,5 +186,9 @@ header nav {
     .submit{
         width: 100%;
         height: 100%;
+    }
+
+    #recipe-img {
+        max-width: 98%;
     }
   }
