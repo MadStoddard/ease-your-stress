@@ -4,6 +4,8 @@
 
 This website allows a user to R.E.L.A.X. by participating in a few stress-free activities of their chosing. The acronym R.E.L.A.X. stands for a few different ways a person could relax: Rest, Eat, Laugh, Appreciate, and eXplore new things. Once a category is chosen, a themed activity is suggested. We hope that this website offers up quick respite for those in need of a fast way to unwind. 
 
+### Link https://madstoddard.github.io/ease-your-stress/
+
 ## Table of Contents
 
 - [Installation](#installation)
