@@ -133,6 +133,8 @@ header nav {
 }
 
 #grat-scroll {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #5d79a3;
     width: 100%;
     height: 110px;
@@ -220,6 +222,6 @@ header nav {
     }
 
     #recipe-img {
-        max-width: 98%;
+        width: 98%;
     }
   }
