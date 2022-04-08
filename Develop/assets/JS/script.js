@@ -101,12 +101,12 @@ function loadImg() {
         return response.json();
     })
 
-    .then(data => {
+    .then(function(data){
         
             var imageEl = document.getElementById('cat-image');
-            console.log(imageEl)
-            imageEl.setAttribute('src',data[0].url)
-            //imageEl.src = data[0].url;
+            imageEl.setAttribute('style','border: 8px solid #1C6EA4');
+            imageEl.src = '';
+            imageEl.src = data[0].url;
             imageDiv.append(imageEl);
         
     });
@@ -118,30 +118,3 @@ var catBtn = document.querySelector("#image-btn");
 catBtn.addEventListener('click', loadImg);
 
 
-// var catBtn = document.querySelector("#image-btn");
-// catBtn.addEventListener('click', loadImg);
-
-/*query = 'Hiking'
-function A(){
-
-    fetch('https://developer.nps.gov/api/v1/activities/parks?q='+query+'&limit=5&api_key=VBndNW51WnDk1pZupTwSSznHcMnutqf3DKYdXklu')
-    .then(function (response){
-        return response.json()
-    })
-    .then(function(data1) {
-
-       var code = data1.data[0].parks[RandomNum(1,268)].parkCode
-        fetch('https://developer.nps.gov/api/v1/activities/parks?parkCode='+code+'&api_key=VBndNW51WnDk1pZupTwSSznHcMnutqf3DKYdXklu')
-        .then(function (response){
-            return response.json()
-        })
-        .then(function (data){
-            console.log(data)
-        })
-        //parkImg.setAttribute('src',data1.data[0].images[0].url);
-        
-        
-    });
-    }
-    A();
-    */
