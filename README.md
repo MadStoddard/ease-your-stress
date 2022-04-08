@@ -2,7 +2,9 @@
 
 ## Description
 
-This website allows a user to R.E.L.A.X. by participating in a few stress-free activities of their chosing. The acronym R.E.L.A.X. stands for a few different ways a person could relax: Rest, Eat, Laugh, Appreciate, and Exercise. Once a category is chosen, a themed activity is suggested. We hope that this website offers up quick respite for those in need of a fast way to unwind. 
+This website allows a user to R.E.L.A.X. by participating in a few stress-free activities of their chosing. The acronym R.E.L.A.X. stands for a few different ways a person could relax: Rest, Eat, Laugh, Appreciate, and Exercise new things. Once a category is chosen, a themed activity is suggested. We hope that this website offers up quick respite for those in need of a fast way to unwind. 
+
+### Link https://madstoddard.github.io/ease-your-stress/
 
 ## Table of Contents
 
@@ -10,14 +12,11 @@ This website allows a user to R.E.L.A.X. by participating in a few stress-free a
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-
+## Screen Shot
+![Main page](./assets/Images/screencapture-madstoddard-github-io-ease-your-stress-2022-04-07-20_45_34.png)
 ## Installation
 
-This website requires no installation. Click link to open webpage: 
-[https://madstoddard.github.io/ease-your-stress/] (Ease Your Stress Website)
-
-![View of Webpage](https://user-images.githubusercontent.com/98136587/162342125-528e377c-4e55-4b05-8d09-3bd65ee57360.png)
-
+This website requires no installation. Click link to open webpage:
 
 ## Usage
 
@@ -653,4 +652,7 @@ copy of the Program in return for a fee.
           
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d7daa941ddca12f1a812901b8a95c1d79c8399d7

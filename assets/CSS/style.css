@@ -5,6 +5,10 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.margin0{
+    margin: 0;
+}
+
 header {
     text-decoration: none;
     padding-top: 0px;
@@ -55,6 +59,7 @@ header nav {
     color: #747481;
 }
 
+
 header h1 {
     padding-top: 10px;
     padding-right: 30px;
@@ -102,11 +107,19 @@ header nav {
     border: 4px solid black;
 }
 
-/* exercise section */
-#Exercise {
+
+/* laugh section */
+#laugh {
     border: 4px solid #19191a;
-    background-color: #7b6e7c;
+    background-color: #91aeda;
     padding-left: 10px;
+}
+
+
+.cat-image img {
+    max-width: 50%;
+    /*border: 8px solid #1C6EA4;
+    */
 }
 
 /* Appreciation & gratitude section */
@@ -117,6 +130,30 @@ header nav {
 }
 
 /* eatout section */
+
+
+
+#Appreciation {
+    display: none;
+}
+
+.graTextArea {
+    width: 98%;
+    background-color: #364862;
+}
+
+#grat-scroll li{
+    font-size: x-large;
+}
+
+#grat-scroll {
+    background-color: #5d79a3;
+    width: 100%;
+    height: 110px;
+    overflow: auto;
+  }
+
+/* explore section */
 #eatout {
     border: 4px solid #19191a;
     background-color: #a79980;
@@ -131,7 +168,7 @@ header nav {
 }
 
 /* exercise section */
-#exercise {
+#Exercise {
     border: 4px solid #19191a;
     background-color: #7b6e7c;
     padding-left: 10px;
@@ -146,7 +183,8 @@ header nav {
 
 .cat-image img, #recipe-img {
     max-width: 50%;
-    border: 8px solid #1C6EA4;
+    /*border: 8px solid #1C6EA4;
+    */
 }
 
 /* Appreciation & gratitude section */
@@ -155,6 +193,7 @@ header nav {
     background-color: #5d79a3;
     padding-left: 10px;
 }
+
 
 
 @media only screen and (max-width: 600px) {
@@ -189,6 +228,6 @@ header nav {
     }
 
     #recipe-img {
-        max-width: 98%;
+        width: 98%;
     }
   }

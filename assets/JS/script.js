@@ -1,14 +1,32 @@
+var GratBtn = document.getElementById('GratitudeSubmit');    
+var GratText = document.getElementById('Gratitude-text');
+var AppBtn = document.getElementById('AppreciationSubmit');
+var AppText = document.getElementById('Appreciation-prompt');
+var AppreciationSection = document.getElementById('Appreciation');
+var GratitudeSection = document.getElementById('Gratitude');
+var AppTextArea = document.getElementById('AppTextArea');
 var recipeImg = document.getElementById('recipe-img');
 var recipeLink = document.getElementById('recipe-link');
 var recipeName = document.getElementById('recipe-name');
 var favoriteBtn = document.getElementById('favoriteBtn');
 var showFavorites =document.getElementById('showFavorites');
-var favList =document.getElementById('favList');
+var favList = document.getElementById('favList');
+var parkImg = document.getElementById('parkImg');
+var catBtn = document.getElementById('image-btn');
 var favArr = [];
 var link;
 var name1 = '';
 var bd = true;
 var text ='';
+var query = '';
+function RandomNum (min,max) {
+    
+        min = Math.ceil(min)
+        max= Math.floor(max)
+        //console.log(Math.floor(Math.random() * (max - min) + min));
+        return Math.floor(Math.random() * (max - min) + min);
+        
+}
 favoriteBtn.addEventListener('click', function() {
     name1 = localStorage.getItem('recipe-name');
     favArr = localStorage.getItem('favArr');
@@ -71,9 +89,11 @@ fetch('https://api.edamam.com/api/recipes/v2?type=public&q=cookie&app_id=0637c2e
         localStorage.setItem('recipe-img',data.hits[0].recipe.image);
 
     })
+
 	.catch(err => console.error(err));
 
-    
+
+
 // random cat image
 function loadImg() {
     var catApi = "https://api.thecatapi.com/v1/images/search?api_key=64449b51-6a0d-4e9c-be78-0517d1e9f6a7";
@@ -82,14 +102,52 @@ function loadImg() {
     .then(response => {
         return response.json();
     })
-    .then(data => {
-        for (var i=0; i <data.length; i++) {
-            var imageEl = document.createElement('img');
-            imageEl.src = data[i].url;
-            imageDiv.append(imageEl);
-        }
+
+    .then(function(data){
+            var imageEl = document.getElementById('cat-image');
+            imageEl.src = data[0].url;
+            imageEl.setAttribute('style','border: 8px solid #1C6EA4');
     });
 };
 
-var catBtn = document.querySelector("#image-btn");
+function ImGratefulForSubmit (){
+    AppText.innerHTML = `I Appreciate ${GratText.value} Because `;    
+    AppreciationSection.style.display = 'block';
+    GratitudeSection.style.display = 'none';
+}
+
+function AppreciationSubmit() {
+    console.log(GratText.value)
+    
+    for (var x = 100; x > 0; x--){
+        if(localStorage.getItem(`I'm Greatful For${x}`)){
+        }  else {
+            localStorage.setItem(`I'm Greatful For${x}`, GratText.value);
+            localStorage.setItem(`I appreciate${x}`, AppTextArea.value);
+            GratAddText();
+            GratText.value = "";
+            AppTextArea.value = "";
+            AppreciationSection.style.display = 'none';
+            GratitudeSection.style.display = 'block';
+            return;
+        }
+    }
+}
+
+function GratAddText(){
+    
+    for (x = 100; x > 0; x--){
+        if(localStorage.getItem(`I'm Greatful For${x}`)){
+            var gratList = document.createElement("li");
+            gratList.innerHTML = "I'm Greatful For " + localStorage.getItem(`I'm Greatful For${x}`) + " Because " + localStorage.getItem(`I appreciate${x}`);
+            document.getElementById("grat-scroll").prepend(gratList);
+        }  else {
+            return;
+        }
+    }
+}
+
+GratAddText();
+GratBtn.addEventListener('click', ImGratefulForSubmit);
+AppBtn.addEventListener('click', AppreciationSubmit);
 catBtn.addEventListener('click', loadImg);
