@@ -12,6 +12,7 @@ var favoriteBtn = document.getElementById('favoriteBtn');
 var showFavorites =document.getElementById('showFavorites');
 var favList = document.getElementById('favList');
 var parkImg = document.getElementById('parkImg');
+var catBtn = document.getElementById('image-btn');
 var favArr = [];
 var link;
 var name1 = '';
