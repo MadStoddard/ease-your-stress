@@ -5,6 +5,10 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.margin0{
+    margin: 0;
+}
+
 header {
     text-decoration: none;
     padding-top: 0px;
@@ -108,6 +112,11 @@ header nav {
     padding-left: 10px;
 }
 
+.graTextArea {
+    width: 98%;
+    background-color: #364862;
+}
+
 .cat-image img {
     max-width: 50%;
     border: 8px solid #1C6EA4;
@@ -119,6 +128,17 @@ header nav {
     background-color: #5d79a3;
     padding-left: 10px;
 }
+
+#grat-scroll li{
+    font-size: x-large;
+}
+
+#grat-scroll {
+    background-color: #5d79a3;
+    width: 100%;
+    height: 110px;
+    overflow: auto;
+  }
 
 /* explore section */
 #eatout {
