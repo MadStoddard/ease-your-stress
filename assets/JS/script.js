@@ -111,7 +111,7 @@ function loadImg() {
 };
 
 function ImGratefulForSubmit (){
-    AppText.innerHTML = `I Appreciate ${GratText.value} Because `;    
+    AppText.innerHTML = `I appreciate ${GratText.value} because `;    
     AppreciationSection.style.display = 'block';
     GratitudeSection.style.display = 'none';
 }
@@ -120,9 +120,9 @@ function AppreciationSubmit() {
     console.log(GratText.value)
     
     for (var x = 100; x > 0; x--){
-        if(localStorage.getItem(`I'm Greatful For${x}`)){
+        if(localStorage.getItem(`I'm grateful for${x}`)){
         }  else {
-            localStorage.setItem(`I'm Greatful For${x}`, GratText.value);
+            localStorage.setItem(`I'm grateful for${x}`, GratText.value);
             localStorage.setItem(`I appreciate${x}`, AppTextArea.value);
             GratAddText();
             GratText.value = "";
@@ -137,9 +137,9 @@ function AppreciationSubmit() {
 function GratAddText(){
     
     for (x = 100; x > 0; x--){
-        if(localStorage.getItem(`I'm Greatful For${x}`)){
+        if(localStorage.getItem(`I'm grateful for${x}`)){
             var gratList = document.createElement("li");
-            gratList.innerHTML = "I'm Greatful For " + localStorage.getItem(`I'm Greatful For${x}`) + " Because " + localStorage.getItem(`I appreciate${x}`);
+            gratList.innerHTML = "I'm grateful for " + localStorage.getItem(`I'm grateful for${x}`) + " because " + localStorage.getItem(`I appreciate${x}`);
             document.getElementById("grat-scroll").prepend(gratList);
         }  else {
             return;
