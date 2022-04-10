@@ -11,8 +11,6 @@ This website allows a user to R.E.L.A.X. by participating in a few stress-free a
 - [Credits](#credits)
 - [License](#license)
 
-## Screen Shot
-![Main page](./assets/Images/screencapture-madstoddard-github-io-ease-your-stress-2022-04-07-20_45_34.png )
 ## Installation
 
 This website requires no installation. Click link to open webpage: https://madstoddard.github.io/ease-your-stress/
