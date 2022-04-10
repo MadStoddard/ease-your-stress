@@ -9,14 +9,18 @@ var recipeImg = document.getElementById('recipe-img');
 var recipeLink = document.getElementById('recipe-link');
 var recipeName = document.getElementById('recipe-name');
 var favoriteBtn = document.getElementById('favoriteBtn');
-var showFavorites =document.getElementById('showFavorites');
+var showFavorites = document.getElementById('showFavorites');
+var showCatFavorites = document.getElementById('showCatFavorites');
+var catFavoriteBtn = document.getElementById('catFavoriteBtn');
 var favList = document.getElementById('favList');
+var favCatList = document.getElementById('favCatList');
 var parkImg = document.getElementById('parkImg');
 var catBtn = document.getElementById('image-btn');
 var favArr = [];
 var link;
 var name1 = '';
 var bd = true;
+var bdc = true;
 var text ='';
 var query = '';
 function RandomNum (min,max) {
@@ -54,15 +58,17 @@ showFavorites.addEventListener('click',function(){
         var li = document.createElement('li') 
         var a = document.createElement('a') 
         var img = document.createElement('img') 
-
+        var p = document.createElement('p') 
         text = favArr[i]
         text = text.split('::')
         img.setAttribute('src',text[2]);
         a.setAttribute('href',text[1]);
-        a.textContent = text[0];
+
+        p.textContent = text[0];
         favList.appendChild(li);
+        li.appendChild(p)
         li.appendChild(a);
-        li.appendChild(img);
+        a.appendChild(img);
         bd = false;
     };
     }else if (bd == false){
@@ -74,7 +80,55 @@ showFavorites.addEventListener('click',function(){
     }
     
    
+});
+catFavoriteBtn.addEventListener('click',function() {
+   
+    favArr = localStorage.getItem('favCatArr');
+    img = localStorage.getItem('cat-image');
+    if ( favArr === null) {
+        favArr = [];
+        favArr.push(img);
+        favArr = JSON.stringify(favArr);
+        localStorage.setItem('favCatArr',favArr);
+
+    } else {
+        favArr = JSON.parse(favArr);
+        favArr.push(img);
+        favArr = JSON.stringify(favArr);
+        localStorage.setItem('favCatArr',favArr);
+    }
+    favoriteCatBtn.setAttribute('style','display:none');
 })
+showCatFavorites.addEventListener('click',function(){
+    favArr = localStorage.getItem('favCatArr')
+    favArr = JSON.parse(favArr);
+    if (favArr!=null && bdc == true) {
+        for(var i=0;i<favArr.length;i++){
+        li = document.createElement('li') 
+        a = document.createElement('a') 
+        img = document.createElement('img') 
+        p = document.createElement('p') 
+        text = favArr[i]
+        // text = text.split('::')
+        img.setAttribute('src',text);
+        a.setAttribute('href',text);
+
+        p.textContent = text[0];
+        favCatList.appendChild(li);
+        li.appendChild(a);
+        a.appendChild(img);
+        bdc = false;
+    };
+    }else if (bdc == false){
+        favList.setAttribute('style','display:none');
+        bdc = null;
+    } else if (bdc == null){
+        favList.setAttribute('style','display:block');
+        bdc = false;
+    }
+    
+})
+
 fetch('https://api.edamam.com/api/recipes/v2?type=public&q=cookie&app_id=0637c2e7&app_key=d01b1197825271e3271e1c4e7c26646f&mealType=Snack&dishType=Biscuits%20and%20cookies&imageSize=SMALL&random=true')
 	.then(response => response.json())
 	.then(function(data) { 
@@ -104,9 +158,11 @@ function loadImg() {
     })
 
     .then(function(data){
+        console.log(data);
             var imageEl = document.getElementById('cat-image');
             imageEl.src = data[0].url;
             imageEl.setAttribute('style','border: 8px solid #1C6EA4');
+            localStorage.setItem('cat-image', data[0].url);
     });
 };
 
