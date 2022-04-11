@@ -1,3 +1,4 @@
+//Gratitude and appreciation elements
 var GratBtn = document.getElementById('GratitudeSubmit');    
 var GratText = document.getElementById('Gratitude-text');
 var AppBtn = document.getElementById('AppreciationSubmit');
@@ -5,32 +6,29 @@ var AppText = document.getElementById('Appreciation-prompt');
 var AppreciationSection = document.getElementById('Appreciation');
 var GratitudeSection = document.getElementById('Gratitude');
 var AppTextArea = document.getElementById('AppTextArea');
+// eat in section elements
 var recipeImg = document.getElementById('recipe-img');
 var recipeLink = document.getElementById('recipe-link');
 var recipeName = document.getElementById('recipe-name');
 var favoriteBtn = document.getElementById('favoriteBtn');
 var showFavorites = document.getElementById('showFavorites');
+var favArr = [];
+// laugh section  elements
 var showCatFavorites = document.getElementById('showCatFavorites');
 var catFavoriteBtn = document.getElementById('catFavoriteBtn');
 var favList = document.getElementById('favList');
 var favCatList = document.getElementById('favCatList');
-var parkImg = document.getElementById('parkImg');
 var catBtn = document.getElementById('image-btn');
-var favArr = [];
+
+// global varables
 var link;
 var name1 = '';
 var bd = true;
 var bdc = true;
 var text ='';
 var query = '';
-function RandomNum (min,max) {
-    
-        min = Math.ceil(min)
-        max= Math.floor(max)
-        //console.log(Math.floor(Math.random() * (max - min) + min));
-        return Math.floor(Math.random() * (max - min) + min);
-        
-}
+
+// funciton to add recipe to favorites
 favoriteBtn.addEventListener('click', function() {
     name1 = localStorage.getItem('recipe-name');
     favArr = localStorage.getItem('favArr');
@@ -50,6 +48,7 @@ favoriteBtn.addEventListener('click', function() {
     }
     favoriteBtn.setAttribute('style','display:none');
 })
+// function to display favorites
 showFavorites.addEventListener('click',function(){
     favArr = localStorage.getItem('favArr')
     favArr = JSON.parse(favArr);
@@ -81,6 +80,7 @@ showFavorites.addEventListener('click',function(){
     
    
 });
+// Add cat picture to favorites
 catFavoriteBtn.addEventListener('click',function() {
    
     favArr = localStorage.getItem('favCatArr');
@@ -97,8 +97,9 @@ catFavoriteBtn.addEventListener('click',function() {
         favArr = JSON.stringify(favArr);
         localStorage.setItem('favCatArr',favArr);
     }
-    favoriteCatBtn.setAttribute('style','display:none');
+    catFavoriteBtn.setAttribute('style','display:none');
 })
+// Display Favotire cat pictures
 showCatFavorites.addEventListener('click',function(){
     favArr = localStorage.getItem('favCatArr')
     favArr = JSON.parse(favArr);
@@ -128,7 +129,7 @@ showCatFavorites.addEventListener('click',function(){
     }
     
 })
-
+// fetching the recipe
 fetch('https://api.edamam.com/api/recipes/v2?type=public&q=cookie&app_id=0637c2e7&app_key=d01b1197825271e3271e1c4e7c26646f&mealType=Snack&dishType=Biscuits%20and%20cookies&imageSize=SMALL&random=true')
 	.then(response => response.json())
 	.then(function(data) { 
@@ -165,13 +166,13 @@ function loadImg() {
             localStorage.setItem('cat-image', data[0].url);
     });
 };
-
+// Grateful Submit Button
 function ImGratefulForSubmit (){
     AppText.innerHTML = `I appreciate ${GratText.value} because `;    
     AppreciationSection.style.display = 'block';
     GratitudeSection.style.display = 'none';
 }
-
+// Appreication Submit Button
 function AppreciationSubmit() {
     console.log(GratText.value)
     
@@ -189,7 +190,7 @@ function AppreciationSubmit() {
         }
     }
 }
-
+// adding text to Gratitude list
 function GratAddText(){
     
     for (x = 100; x > 0; x--){
@@ -204,6 +205,7 @@ function GratAddText(){
 }
 
 GratAddText();
+// adding event listeners
 GratBtn.addEventListener('click', ImGratefulForSubmit);
 AppBtn.addEventListener('click', AppreciationSubmit);
 catBtn.addEventListener('click', loadImg);
