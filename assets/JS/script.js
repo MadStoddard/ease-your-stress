@@ -165,6 +165,7 @@ function loadImg() {
             imageEl.setAttribute('style','border: 8px solid #1C6EA4');
             localStorage.setItem('cat-image', data[0].url);
     });
+    catFavoriteBtn.setAttribute('style','display:block')
 };
 // Grateful Submit Button
 function ImGratefulForSubmit (){
